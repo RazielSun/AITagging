@@ -2,6 +2,7 @@
 # AI Tagging
 
 This plugin provides AI-powered tagging for Unreal Engine assets using pretrained CLIP models.
+
 ⚠️ Note: This is a proof-of-concept and educational tool, not intended for production use.
 
 ## About
