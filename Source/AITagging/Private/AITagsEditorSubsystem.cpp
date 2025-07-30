@@ -502,7 +502,7 @@ void UAITagsEditorSubsystem::HandleCLIPProcessCompleted(int32 ReturnCode)
 	AsyncTask(ENamedThreads::GameThread, [this, RootJsonObject]()
 	{
 		TArray<TSharedPtr<FJsonValue>> EntriesArray = RootJsonObject->GetArrayField(TEXT("Entries"));
-		for (const auto EntryValue : EntriesArray)
+		for (const TSharedPtr<FJsonValue>& EntryValue : EntriesArray)
 		{
 			// Each entry is itself a JSON object
 			TSharedPtr<FJsonObject> EntryObj = EntryValue->AsObject();
@@ -573,7 +573,7 @@ void UAITagsEditorSubsystem::HandleImageToTextProcessCompleted(int32 ReturnCode)
 	AsyncTask(ENamedThreads::GameThread, [this, RootJsonObject]()
 	{
 		TArray<TSharedPtr<FJsonValue>> EntriesArray = RootJsonObject->GetArrayField(TEXT("Entries"));
-		for (const auto EntryValue : EntriesArray)
+		for (const TSharedPtr<FJsonValue>& EntryValue : EntriesArray)
 		{
 			// Each entry is itself a JSON object
 			TSharedPtr<FJsonObject> EntryObj = EntryValue->AsObject();

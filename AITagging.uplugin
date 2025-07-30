@@ -28,6 +28,10 @@
 		{
 			"Name": "PythonFoundationPackages",
 			"Enabled": true
+		},
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true
 		}
 	]
 }
